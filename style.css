@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-image: url("camera_image.png");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+/*menu button*/
+.menu-button{
+    position: fixed;
+    top:20px;
+    left:20px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index:1000;
+}
+
+
+
+/*sidebar*/
+.sidebar{
+    position: fixed;
+    top:0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35);
+    padding: 10px;
+    transition: 0.4s ease;
+   
+}
+
+#menu-toggle:checked~.sidebar{
+    left:0;
+   
+}
+
+#menu-toggle:checked~.menu-button{
+    opacity: 0;   
+}
+
+
+/* close-button */
+.close-button{
+    font-size: 30px;
+    color:white;
+    cursor: pointer;
+    float: right;
+}
+
+
+
+
+/*menu items*/
+
+.menu{
+    list-style: none;
+    margin-top: 50px;
+   
+}
+#home{
+    width: 100%;
+}
+
+
+.menu a{
+    display:block;
+    width: 100%;
+    padding: 10px 20px;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    border:2px solid transparent;
+    transition: all 0.3s ease;
+   
+    
+}
+
+.menu a:hover{
+    color:#ffcc00;
+    padding-left: 10px;
+    border-color:rgb(68, 65, 62);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*social media icons*/
+.social{
+    position: absolute;
+    bottom:40px;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social a{
+    color:white;
+    font-size: 22px;
+    transition: 0.4s;
+}
+
+.social a:hover{
+    color:#ffaa00;
+    transform:scale(1.7);
+}
+
+/* profile */
+.profile {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+}
+
+.profile img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.profile h3 {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.profile p {
+    font-size: 13px;
+    color: #ddd;
+}
+
+
